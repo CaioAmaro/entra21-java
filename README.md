@@ -7,7 +7,7 @@ Este repositório contém todos os exercícios e avaliações desenvolvidos dura
 ![GitHub top language](https://img.shields.io/github/languages/top/CaioAmaro/entra21-java)
 
 
-👨‍🎓 Aluno: **Caio Ítalo Lima Amaro**  
+👨‍🎓 Aluno: **Caio Amaro**  
 👨‍🏫 Professor: **Henrique Delegrego**
 
 ## 📁 Estrutura do Repositório
