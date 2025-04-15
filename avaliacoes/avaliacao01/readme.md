@@ -50,7 +50,7 @@ Programa que trabalha com uma **matriz 7x24** representando temperaturas por hor
 ## 🛠️ Tecnologias Utilizadas
 
 - Java 17  
-- IDE: IntelliJ IDEA ou Eclipse  
+- IDE: Eclipse  
 - Entrada via console (Scanner)
 
 ---
