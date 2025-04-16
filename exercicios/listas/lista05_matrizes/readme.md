@@ -31,7 +31,7 @@ Este diretório contém exercícios práticos sobre **matrizes** desenvolvidos d
 ### 4️⃣ Análise de Dados Imobiliários
 
 Dada a matriz:
-```java
+`java
 int[][] matriz = {
 // {tamanho, quartos, preço}
 };
