@@ -49,9 +49,9 @@ Responder:
 
     e) Qual a média de tamanho das casas que custam mais de 300.000?
 
+---
 
-
-5️⃣ Pesquisa de Satisfação no Cinema
+### 5️⃣ Pesquisa de Satisfação no Cinema
 
 Sem utilizar vetores, crie um programa que:
 
@@ -67,8 +67,9 @@ Sem utilizar vetores, crie um programa que:
 
         Quantas mulheres com mais de 50 anos deram nota acima da média geral.
 
+---
 
-6️⃣ Impressão de Figuras com Matrizes
+### 6️⃣ Impressão de Figuras com Matrizes
 
 Utilizando laços e matrizes, imprima:
 
@@ -90,8 +91,10 @@ Utilizando laços e matrizes, imprima:
 * * *
 * * * *
 
+---
 
-🧠 Desafio - Matriz 3x5
+
+### 🧠 Desafio - Matriz 3x5
 
 Criar uma matriz 3x5 de inteiros. O programa deve:
 
@@ -101,13 +104,17 @@ Criar uma matriz 3x5 de inteiros. O programa deve:
 
     c) Contar números ímpares maiores que a média dos elementos.
 
-🛠️ Requisitos Técnicos
+---
+
+### 🛠️ Requisitos Técnicos
 
     Linguagem: Java
 
     Paradigma: Programação Estruturada
 
     Projeto desenvolvido como parte das atividades do curso Entra21
+
+---
 
 
  Status
