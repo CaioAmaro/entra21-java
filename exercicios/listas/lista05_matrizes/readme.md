@@ -74,10 +74,10 @@ Sem utilizar vetores, crie um programa que:
 Utilizando laços e matrizes, imprima:
 
 
-* * * *
-* * * *
-* * * *
-* * * *
+(* * * *)
+(* * * *)
+(* * * *)
+(* * * *)
 
 
 * * * *
