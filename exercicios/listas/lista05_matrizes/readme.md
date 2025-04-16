@@ -71,25 +71,9 @@ Sem utilizar vetores, crie um programa que:
 
 ### 6️⃣ Impressão de Figuras com Matrizes
 
-Utilizando laços e matrizes, imprima:
+Utilizando laços e matrizes, imprima algumas figuras:
 
 
-(* * * *)
-(* * * *)
-(* * * *)
-(* * * *)
-
-
-* * * *
-* *
-* *
-* * * *
-
-
-*
-* *
-* * *
-* * * *
 
 ---
 
