@@ -1,81 +1,107 @@
-package lista06_metodos;
+package exercicio_metodos;
 
 import java.util.Scanner;
 
-/* 8) Faça um programa em que o usuário entre com um número de 1 a 4
-   Com o número 1 sendo verão, 2 sendo outono... 
-   Dependendo de o que o usuário informa, retorne:
-
-   É verão
-   E o tempo está quente.
-   Ou
-   É inverno
-   E está frio.*/
+/*
+ * 8) Faça um programa em que o usuário entre com um número de 1 a 4
+	Com o número 1 sendo verão, 2 sendo outono...
+	Dependendo de o que o usuário informa, retorne:
+	É verão
+	E o tempo está quente.
+	Ou
+	É inverno
+	E está frio.
+	Faça um método para cada estação do ano
+*/
 
 public class Exercicio08 {
 	
+	public static void pulaLinha() {
+		System.out.println();
+	}
+	
 	public static void menu() {
-		System.out.println("***** MENU *****");
-		System.out.println();
-		System.out.println("1 -> VERÃO");
-		System.out.println("2 -> OUTONO");
-		System.out.println("3 -> INVERNO");
-		System.out.println("4 -> PRIMAVERA");
-		System.out.println();
-		System.out.println("-------------------");
-		System.out.println("Escolha ");
+		System.out.println("Menu");
+		System.out.println("1 - Verão");
+		System.out.println("2 - Outono");
+		System.out.println("3 - Inverno");
+		System.out.println("4 - Primavera");
+		pulaLinha();
+	}
+	
+	public static void perguntar(String msg) {
+		System.out.println(msg);
 		System.out.print("R: ");
 	}
 	
-	public static void verao() {
-		System.out.println("É verão, que caloooooooooor!!!");
+	public static void obterResposta() {
+		Scanner input = new Scanner(System.in);
+		int opcao = input.nextInt();
+		validar(opcao, 4);	
 	}
 	
-	public static void outono() {
-		System.out.println("É outono, e as folhas caem das árvores.");
+	public static void validar(int opcao, int opcaoMax) {
+		
+		boolean valido = opcao >= 1 && opcao <= opcaoMax;
+	
+		
+		while(!valido) {
+			pulaLinha();
+			System.out.println("Opção selecionada não é valida!");
+			System.out.println("Tente novamente!");
+			System.out.print("R: ");
+			obterResposta();
+			return;
+		}
+		
+		
+		controller(opcao);
+		
 	}
 	
-	public static void inverno() {
-		System.out.println("É inverno, que friozinho! bom pra dormir");
+	public static void controller(int opcao) {
+		String resposta = "";
+		
+		pulaLinha();
+		
+		if(opcao == 0) {
+			System.out.println("Saindo....");
+			return;
+		}
+		else if(opcao == 1) resposta = verao();
+		else if(opcao == 2) resposta = outono();
+		else if(opcao == 3) resposta = inverno();
+		else if(opcao == 4) resposta = primavera();
+		
+		System.out.println(resposta);
+		
 	}
 	
-	public static void primavera() {
-		System.out.println("É primavera, e as flores estão muitos bonitos!");
+	public static String verao() {
+		return "é verão";
 	}
 	
-	public
+	public static String outono() {
+		return "é outono";
+	}
+	
+	public static String inverno() {
+		return "é inverno";
+	}
+	
+	public static String primavera() {
+		return "é primavera";
+	}
+	
+	public static void run() {
+		menu();
+		perguntar("Qual opção você deseja selecionar?");
+		obterResposta();
+		
+	}
 	
 	public static void main(String[] args) {
-		
-		Scanner input = new Scanner(System.in);
-		int opcaoEscolha = 0;
-		
-		menu();
-		
-		
-		
-		opcaoEscolha = input.nextInt();
-		
-		while(!(opcaoEscolha >= 1 && opcaoEscolha <= 4)) {
-			System.out.println();
-			System.out.println("Opção Selecionada Inexistente. ");
-			System.out.println();
-			menu();
-			opcaoEscolha = input.nextInt();
-		}
-		
-		System.out.println();
-		
-		if(opcaoEscolha == 1) {
-			verao();
-		}else if (opcaoEscolha == 2) {
-			outono();
-		}else if(opcaoEscolha == 3) {
-			inverno();
-		}else{
-			primavera();
-		}
-		
+		run();
 	}
 
 }
