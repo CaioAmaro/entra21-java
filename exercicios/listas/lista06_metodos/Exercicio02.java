@@ -1,4 +1,4 @@
-package lista6_metodos;
+package lista06_metodos;
 
 import java.util.Scanner;
 

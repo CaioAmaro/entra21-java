@@ -1,4 +1,4 @@
-package exercicio_metodos;
+package lista06_metodos;
 
 /*14) Faça um programa que receba 3 notas do usuário e informe a média aritmética dessas notas
 		Retorne a média
