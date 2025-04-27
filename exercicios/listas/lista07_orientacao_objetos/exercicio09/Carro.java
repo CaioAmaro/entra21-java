@@ -13,7 +13,7 @@ public class Carro {
     }
 
     public void reduzir(int reducao){
-        if(aceleracao >= 0 && aceleracao < 30) setVelocidade(-aceleracao);
+        if(reducao >= 0 && reducao < 30) setVelocidade(-reducao);
         else System.out.println("Redução invalida! Velocidade de redução permitida (0km/h - 30km/h)");
     }
 }
