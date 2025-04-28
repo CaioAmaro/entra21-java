@@ -8,12 +8,19 @@ public class Carro {
     }
 
     public void acelerar(int aceleracao){
-        if(aceleracao >= 0 && aceleracao < 20) setVelocidade(aceleracao);
-        else System.out.println("Aceleração invalida! Velocidade de Aceleração permitida (0km/h - 19km/h)");
+
+        try{
+            if(aceleracao >= 0 && aceleracao < 20) setVelocidade(aceleracao);
+            else throw new IllegalArgumentException("Aceleração invalida! Velocidade de Aceleração permitida (0km/h - 19km/h)");
+        }catch (Exception e){
+            System.out.println(e.getMessage());
+        }
+
+
     }
 
     public void reduzir(int reducao){
         if(reducao >= 0 && reducao < 30) setVelocidade(-reducao);
-        else System.out.println("Redução invalida! Velocidade de redução permitida (0km/h - 30km/h)");
+        else throw new IllegalArgumentException("Aceleração invalida! Velocidade de Aceleração permitida (0km/h - 30km/h)");
     }
 }

@@ -20,7 +20,7 @@ public class Main {
         OnibusEscolar onibusEscolar = new OnibusEscolar();
 
         onibusEscolar.setQuantidadeProfessores(1);
-        onibusEscolar.setQuantidadeAlunos(5);
+        onibusEscolar.setQuantidadeAlunos(50);
         System.out.println("Quantidade de alunos: "+ onibusEscolar.quantidadeAlunos);
         System.out.println("Quantidade de professores: "+ onibusEscolar.quantidadeProfessores);
         onibusEscolar.setQuantidadeProfessores(2);

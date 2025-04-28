@@ -23,7 +23,7 @@ public class Main {
         System.out.println("Aceleração carro atual: " + carro.velocidade + "km");
         carro.acelerar(10);
         System.out.println("Aceleração carro atual: " + carro.velocidade + "km");
-        carro.acelerar(19);
+        carro.acelerar(20);
         System.out.println("Aceleração carro atual: " + carro.velocidade + "km");
         carro.reduzir(20);
         System.out.println("Aceleração carro atual: " + carro.velocidade + "km");

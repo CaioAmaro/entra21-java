@@ -5,12 +5,20 @@ public class OnibusEscolar {
     int quantidadeProfessores;
 
     public void setQuantidadeAlunos(int quantidadeAlunos) {
-        if(quantidadeAlunos > 40) this.quantidadeAlunos = 40;
-        else if(quantidadeAlunos < 0) this.quantidadeAlunos = 0;
-        else this.quantidadeAlunos = quantidadeAlunos;
+        try{
+            if(quantidadeAlunos > 40) {
+                throw new IllegalArgumentException("Quantidade Max é 40 alunos, alterando variavel para 40 alunos.");
+            }
+            else if(quantidadeAlunos < 0) this.quantidadeAlunos = 0;
+            else this.quantidadeAlunos = quantidadeAlunos;
 
-        if(this.quantidadeProfessores == 0 ){
-            this.quantidadeAlunos = 0;
+            if(this.quantidadeProfessores == 0 ){
+                this.quantidadeAlunos = 0;
+            }
+
+        }catch (Exception e){
+            System.out.println(e.toString());
+            this.quantidadeAlunos = 40;
         }
     }
 
