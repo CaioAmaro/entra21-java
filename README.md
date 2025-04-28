@@ -36,3 +36,7 @@ O Entra21 é um programa de capacitação profissional na área de tecnologia, p
 
 📌 *Este repositório será atualizado conforme o andamento do curso.*
 
+
+![image](https://github.com/user-attachments/assets/c291a072-acea-4753-85c5-534738228ee6)
+
+
