@@ -2,9 +2,9 @@ package lista07_orientacao_objetos.exercicio03;
 
 public class Produto {
 	
-	String nome;
-	String descricao;
-	double precoUnitario;
-	int desconto;
+	public String nome;
+	public String descricao;
+	public double precoUnitario;
+	public int desconto;
 
 }

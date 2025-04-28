@@ -1,9 +1,9 @@
 package lista07_orientacao_objetos.exercicio04;
 
 public class Circulo {
-	double raio;
+	public double raio;
 	
-	double obterRaio() {
+	 public double obterRaio() {
 		return Math.PI * (Math.pow(raio, 2));
 	}
 	

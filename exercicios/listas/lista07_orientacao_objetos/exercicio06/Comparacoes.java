@@ -1,5 +1,7 @@
 package lista07_orientacao_objetos.exercicio06;
 
+import lista07_orientacao_objetos.exercicio06.Mercado;
+
 public class Comparacoes {
 
 	public static Mercado getMaiorVendendorMaca(Mercado[] vetor) {

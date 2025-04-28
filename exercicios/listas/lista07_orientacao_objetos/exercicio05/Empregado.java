@@ -1,20 +1,20 @@
 package lista07_orientacao_objetos.exercicio05;
 
 public class Empregado {
-	int indentificacao;
-	String nome;
-	String sobrenome;
-	double salarioMensal;
-	
-	double calcularSalarioAnual() {
+	public  int indentificacao;
+	public String nome;
+	public String sobrenome;
+	public double salarioMensal;
+
+	public double calcularSalarioAnual() {
 		return salarioMensal * 12;
 	}
-	
-	String obterNomeCompleto() {
+
+	public String obterNomeCompleto() {
 		return nome + " " + sobrenome;
 	}
-	
-	String modificarSalarioMensal(double percentual) {
+
+	public String modificarSalarioMensal(double percentual) {
 		
 		percentual = percentual/100;
 		

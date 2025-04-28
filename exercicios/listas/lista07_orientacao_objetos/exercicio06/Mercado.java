@@ -9,9 +9,9 @@ package lista07_orientacao_objetos.exercicio06;
 */
 
 public class Mercado {
-	public String nome;
-	public int qtdVendaMaca;
-	public double precoMaca;
-	public int qtdVendaLaranja;
-	public double precoLaranja;
+	protected String nome;
+	protected int qtdVendaMaca;
+	protected double precoMaca;
+	protected int qtdVendaLaranja;
+	protected double precoLaranja;
 }
