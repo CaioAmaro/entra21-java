@@ -9,9 +9,37 @@ package lista07_orientacao_objetos.exercicio06;
 */
 
 public class Mercado {
-	protected String nome;
-	protected int qtdVendaMaca;
-	protected double precoMaca;
-	protected int qtdVendaLaranja;
-	protected double precoLaranja;
+	private String nome;
+	private int qtdVendaMaca;
+	private double precoMaca;
+	private int qtdVendaLaranja;
+	private double precoLaranja;
+
+	public Mercado(){
+
+	}
+
+	public Mercado(String nome, int qtdVendaMaca, double precoMaca, int qtdVendaLaranja, double precoLaranja) {
+		this.nome = nome;
+		this.qtdVendaMaca = qtdVendaMaca;
+		this.precoMaca = precoMaca;
+		this.qtdVendaLaranja = qtdVendaLaranja;
+		this.precoLaranja = precoLaranja;
+	}
+
+	public double obterReceitaMaca(){
+		return this.precoMaca * this.qtdVendaMaca;
+	}
+
+	public double obterReceitaLaranja(){
+		return this.precoLaranja * this.qtdVendaLaranja;
+	}
+
+	public double obterReceita(){
+		return obterReceitaMaca() + obterReceitaLaranja();
+	}
+
+	public String getNome() {
+		return nome;
+	}
 }

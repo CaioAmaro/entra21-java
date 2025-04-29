@@ -1,25 +1,18 @@
 package lista07_orientacao_objetos.exercicio06;
 
-import lista07_orientacao_objetos.exercicio06.Mercado;
-
 public class Comparacoes {
 
 	public static Mercado getMaiorVendendorMaca(Mercado[] vetor) {
 		
 		Mercado mercado = new Mercado();
-		double receitaMaca = Double.MIN_VALUE;
+		double maiorReceitaMaca = Double.MIN_VALUE;
 
 
 		for(int i = 0; i < vetor.length; i++) {
 
-			double receitaComparando = vetor[i].precoMaca * vetor[i].qtdVendaMaca;
-
-			System.out.println(receitaComparando);
-
-			if(receitaComparando > receitaMaca){
-				System.out.println("entrei");
+			if(vetor[i].obterReceitaMaca() > maiorReceitaMaca){
 				mercado = vetor[i];
-				receitaMaca = receitaComparando;
+				maiorReceitaMaca = vetor[i].obterReceitaMaca();
 			}
 
 		}
@@ -31,16 +24,14 @@ public class Comparacoes {
 	public static Mercado getMaiorVendendorLaranja(Mercado[] vetor) {
 
 		Mercado mercado = new Mercado();
-		double receitaLaranja = Double.MIN_VALUE;
+		double maiorReceitaLaranja = Double.MIN_VALUE;
 
 
 		for(int i = 0; i < vetor.length; i++) {
 
-			double receitaComparando = vetor[i].precoLaranja * vetor[i].qtdVendaLaranja;
-
-			if(receitaComparando > receitaLaranja){
+			if(vetor[i].obterReceitaLaranja() > maiorReceitaLaranja){
 				mercado = vetor[i];
-				receitaLaranja = receitaComparando;
+				maiorReceitaLaranja = vetor[i].obterReceitaLaranja();
 			}
 
 		}
@@ -52,16 +43,13 @@ public class Comparacoes {
 	public static Mercado getMercadoMaiorReceita(Mercado[] vetor){
 		Mercado mercado = new Mercado();
 
-		double receitaTotal = Double.MIN_VALUE;
-
+		double maiorReceita = Double.MIN_VALUE;
 
 		for(int i = 0; i < vetor.length; i++) {
 
-			double receitaComparando = (vetor[i].precoLaranja * vetor[i].qtdVendaLaranja) + (vetor[i].precoMaca * vetor[i].qtdVendaMaca);
-
-			if(receitaComparando > receitaTotal){
+			if(vetor[i].obterReceita() > maiorReceita){
 				mercado = vetor[i];
-				receitaTotal = receitaComparando;
+				maiorReceita = vetor[i].obterReceita();
 			}
 
 		}
@@ -72,16 +60,13 @@ public class Comparacoes {
 	public static Mercado getMercadoMenorReceita(Mercado[] vetor){
 		Mercado mercado = new Mercado();
 
-		double receitaTotal = Double.MAX_VALUE;
-
+		double menorReceita = Double.MAX_VALUE;
 
 		for(int i = 0; i < vetor.length; i++) {
 
-			double receitaComparando = (vetor[i].precoLaranja * vetor[i].qtdVendaLaranja) + (vetor[i].precoMaca * vetor[i].qtdVendaMaca);
-
-			if(receitaComparando < receitaTotal){
+			if(vetor[i].obterReceita() < menorReceita){
 				mercado = vetor[i];
-				receitaTotal = receitaComparando;
+				menorReceita = vetor[i].obterReceita();
 			}
 
 		}
@@ -91,11 +76,11 @@ public class Comparacoes {
 
 	public static Mercado getMercadoMeioReceita(Mercado[] vetor){
 		Mercado mercado = new Mercado();
-		Mercado maiorReceita = getMercadoMaiorReceita(vetor);
-		Mercado menorReceita = getMercadoMenorReceita(vetor);
+		String maiorReceita = getMercadoMaiorReceita(vetor).getNome();
+		String menorReceita = getMercadoMenorReceita(vetor).getNome();
 
 		for(int i = 0; i < vetor.length; i++){
-			if( !vetor[i].nome.equals(maiorReceita.nome) && !vetor[i].nome.equals(menorReceita.nome) ){
+			if( !vetor[i].getNome().equals(maiorReceita) && !vetor[i].getNome().equals(menorReceita) ){
 				mercado = vetor[i];
 			}
 		}
@@ -109,8 +94,8 @@ public class Comparacoes {
 
 		for(int i = 0; i < vetor.length; i++){
 
-			laranja = vetor[i].precoLaranja * vetor[i].qtdVendaLaranja;
-			maca = vetor[i].precoMaca * vetor[i].qtdVendaMaca;
+			laranja = vetor[i].obterReceitaLaranja();
+			maca = vetor[i].obterReceitaMaca();
 
 		}
 

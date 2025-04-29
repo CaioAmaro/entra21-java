@@ -18,35 +18,17 @@ f) Juntando as 3 lojas, a franquia teve uma receita maior vendendo maçãs ou la
 public class Main {
 	public static void main(String[] args) {
 		
-		Mercado unidadeDeBlumenau = new Mercado();
-		Mercado unidadeDeJoinville = new Mercado();
-		Mercado unidadeDeFlorianopolis = new Mercado();
+		Mercado unidadeDeBlumenau = new Mercado("Blumenau", 15, 1, 1, 1);
+		Mercado unidadeDeJoinville = new Mercado("Joinville", 11, 1, 1, 1);
+		Mercado unidadeDeFlorianopolis = new Mercado("Florianopolis", 13, 1, 1, 1);
 		
-		Mercado vetor[] = {unidadeDeBlumenau, unidadeDeJoinville, unidadeDeFlorianopolis};
-		
-		vetor[0].nome = "Blumenau";
-		vetor[0].qtdVendaMaca = 1;
-		vetor[0].precoMaca = 1;
-		vetor[0].qtdVendaLaranja = 1;
-		vetor[0].precoLaranja = 1;
-		
-		vetor[1].nome = "Joinville";
-		vetor[1].qtdVendaMaca = 11;
-		vetor[1].precoMaca = 1;
-		vetor[1].qtdVendaLaranja = 1;
-		vetor[1].precoLaranja = 1;
-		
-		vetor[2].nome = "Florianopolis";
-		vetor[2].qtdVendaMaca = 10;
-		vetor[2].precoMaca = 1;
-		vetor[2].qtdVendaLaranja = 1;
-		vetor[2].precoLaranja = 1;
+		Mercado[] vetor = {unidadeDeBlumenau, unidadeDeJoinville, unidadeDeFlorianopolis};
 
-		System.out.println("Maior vendendor de maça é " + Comparacoes.getMaiorVendendorMaca(vetor).nome );
-		System.out.println("Maior vendendor de Laranja é " + Comparacoes.getMaiorVendendorLaranja(vetor).nome );
-		System.out.println("Maior receita foi " + Comparacoes.getMercadoMaiorReceita(vetor).nome);
-		System.out.println("Menor receita foi " + Comparacoes.getMercadoMenorReceita(vetor).nome);
-		System.out.println("Meio receita foi " + Comparacoes.getMercadoMeioReceita(vetor).nome);
+		System.out.println("Maior vendendor de maça é " + Comparacoes.getMaiorVendendorMaca(vetor).getNome() );
+		System.out.println("Maior vendendor de Laranja é " + Comparacoes.getMaiorVendendorLaranja(vetor).getNome() );
+		System.out.println("Maior receita foi " + Comparacoes.getMercadoMaiorReceita(vetor).getNome());
+		System.out.println("Menor receita foi " + Comparacoes.getMercadoMenorReceita(vetor).getNome());
+		System.out.println("Meio receita foi " + Comparacoes.getMercadoMeioReceita(vetor).getNome());
 		System.out.println("Produto que teve mais receita foi " + Comparacoes.getProdutoMaiorLucro(vetor));
 	}
 }
