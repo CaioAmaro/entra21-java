@@ -5,11 +5,11 @@ public class Operacoes {
     public static AeronaveResultado obterMaiorPassageiro(Aeronave[] vetor){
         AeronaveResultado resultado = new AeronaveResultado();
 
-        int qtdMaiorPassageiro = Integer.MIN_VALUE;
+        int maiorQtdPassageiro = Integer.MIN_VALUE;
 
         for(int i = 0; i < vetor.length; i++){
-            if(vetor[i].passageiros > qtdMaiorPassageiro){
-                qtdMaiorPassageiro = vetor[i].passageiros;
+            if(vetor[i].passageiros > maiorQtdPassageiro){
+                maiorQtdPassageiro = vetor[i].passageiros;
                 resultado.aeronave = vetor[i];
             }
         }
