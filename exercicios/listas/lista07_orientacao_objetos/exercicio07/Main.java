@@ -37,7 +37,5 @@ public class Main {
         resultado = Operacoes.obterMaiorDistancia(vetor);
         System.out.println("Aernova " + resultado.aeronave.modelo + " Consegue percorrer a maior distância que é " + (int) resultado.distanciaKm + "Km");
 
-
-
     }
 }
