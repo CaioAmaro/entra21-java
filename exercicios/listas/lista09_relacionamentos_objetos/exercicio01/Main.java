@@ -14,7 +14,7 @@ Imprima o toString desses Retangulos
 import java.util.ArrayList;
 import java.util.List;
 
-public class main {
+public class Main {
     public static void main(String[] args) {
         List<Retangulo> retangulos = new ArrayList<>();
         Armazem armazem = new Armazem();
@@ -26,6 +26,9 @@ public class main {
         retangulos.add(new Retangulo(2, 4));
 
         armazem.setRetangulos(retangulos);
+
+        System.out.println(armazem.obterMaiorPerimetro() + " Tem o maior perimetro.");
+        System.out.println(armazem.obterMaiorArea() + " Tem a maior área.");
 
 
 

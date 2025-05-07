@@ -5,6 +5,9 @@ public class Retangulo {
     private double largura;
 
     public Retangulo(double altura, double largura) {
+        if(altura <= 0 || largura <=0){
+            throw new IllegalArgumentException("Valores Inválido");
+        }
         this.altura = altura;
         this.largura = largura;
     }
@@ -23,5 +26,13 @@ public class Retangulo {
 
     public double getLargura() {
         return largura;
+    }
+
+    @Override
+    public String toString() {
+        return "Retangulo {" +
+                "altura=" + altura +
+                ", largura=" + largura +
+                '}';
     }
 }

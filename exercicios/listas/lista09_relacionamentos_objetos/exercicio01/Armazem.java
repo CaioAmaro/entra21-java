@@ -11,27 +11,37 @@ public class Armazem {
 
     public Retangulo obterMaiorPerimetro(){
         double maiorPerimetro = Double.MIN_VALUE;
+        Retangulo retanguloResposta = null;
 
-        for(Retangulo retangulo: retangulos){
-            if(retangulo.obterPerimetro() > maiorPerimetro){
+        for(Retangulo retangulo: retangulos) {
+            if (retangulo.obterPerimetro() > maiorPerimetro) {
                 maiorPerimetro = retangulo.obterPerimetro();
-                Retangulo retanguloResposta = new Retangulo(retangulo.getAltura(), retangulo.getLargura());
-            }else{
-                throw new IllegalArgumentException("Não conseguimos encontrar o maior Perimetro");
+                retanguloResposta = retangulo;
             }
         }
-        return new Retangulo(0,0);
+
+        if(retanguloResposta == null){
+            throw new IllegalArgumentException("Não foi possivel obter maior perimetro");
+        }
+
+        return retanguloResposta;
     }
 
-    public double obterMaiorArea(){
+    public Retangulo obterMaiorArea(){
         double maiorArea = Double.MIN_VALUE;
+        Retangulo retanguloResposta = null;
 
-        for(Retangulo retangulo: retangulos){
-            if(retangulo.obterArea() > maiorArea){
+        for(Retangulo retangulo: retangulos) {
+            if (retangulo.obterPerimetro() > maiorArea) {
                 maiorArea = retangulo.obterArea();
+                retanguloResposta = retangulo;
             }
         }
 
-        return maiorArea;
+        if(retanguloResposta == null){
+            throw new IllegalArgumentException("Não foi possivel obter maior perimetro");
+        }
+
+        return retanguloResposta;
     }
 }
