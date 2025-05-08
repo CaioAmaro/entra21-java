@@ -109,27 +109,4 @@ public class MateriaisContrucao {
         Material material = calculoMaisCaro();
         return material.getNome() + " é o mais caro dos materiais com R$ " + material.getPreco();
     }
-
-    private Material obterMaior(double atributo){
-        double maior = Double.MIN_VALUE;
-        Material materialResponse = null;
-
-        for(Material material: materiais){
-            if(atributo > maior){
-                maior = atributo;
-                materialResponse = material;
-            }
-        }
-
-        if(materialResponse == null){
-            throw new IllegalArgumentException("Erro!");
-        }
-
-        return materialResponse;
-    }
-
-    private String mostrarMaior(){
-        Material material = obterMaior();
-        return "Nome de campo " this.;
-    }
 }
